@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.login-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form h2 {
+  margin-bottom: 15px;
+}
+
+.login-form div {
+  margin-bottom: 10px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+}
+
+.login-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
