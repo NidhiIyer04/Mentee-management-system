@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import Login from './components/Login';
+import Card from './components/Cards';
+import Navbar from './components/Navbar';
 function App() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState(sessionStorage.getItem("username")?sessionStorage.getItem("username"):'');
+  const [email, setemail] = useState(sessionStorage.getItem("email")?sessionStorage.getItem("email"):'');
+  
+  const [password, setPassword] = useState(sessionStorage.getItem("password")?sessionStorage.getItem("password"):"");
+  const [Loggedin, setLoggedin]= useState(sessionStorage.getItem("Loggedin")?sessionStorage.getItem("Loggedin"):false);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -20,21 +25,22 @@ function App() {
     // You can implement your login logic here
   };
 
-  return (
-    <div className="App">
-      <form onSubmit={handleSubmit} className="login-form">
-        <h2>Login</h2>
-        <div>
-          <label>Username:</label>
-          <input type="text" value={username} onChange={handleUsernameChange} />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={handlePasswordChange} />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
+  return (<>
+    {!Loggedin && <><Login username={username} setUsername={setUsername}
+    password={password}
+    setPassword={setPassword}
+    Loggedin={Loggedin}
+    setLoggedin={setLoggedin}
+    email={email}
+    setemail={setemail} /></>}
+    {Loggedin && <>
+      <Navbar Loggedin={Loggedin} setLoggedin={setLoggedin}  username={username}     email={email}
+ />
+      <Card 
+          
+           />
+    </>}
+</>
   );
 }
 

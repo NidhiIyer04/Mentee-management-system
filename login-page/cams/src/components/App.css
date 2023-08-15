@@ -1,0 +1,145 @@
+/* app.css */
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+  #header {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .student-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .student-dropdown input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .student-dropdown:hover {
+    outline: 2px solid white; /* Change the color as needed */
+  }
+  
+  .student-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+  }
+  
+  .student-dropdown li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .student-dropdown li:last-child {
+    border-bottom: none;
+  }
+
+  /* app.css */
+/* Rest of your styles */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-container input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .dropdown-arrow {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  #navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #navbar li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+  }
+  
+  
+  #navbar li a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  
+  #title {
+    margin: 0;
+    padding-right: 350px;
+     font-size:xx-large;
+  }
+  
+  /* Other styles and overrides as needed */
+  
+
+/* Rest of your styles */
+
+/* Add this style to control the visibility of the profile dropdown */
+.profile-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1;
+}
+
+.profile-dropdown-container:hover .profile-dropdown {
+  display: block;
+}
+
+/* Add any other styles you need */
+
+
+
+  
