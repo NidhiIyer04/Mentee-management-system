@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import StudentDropdown from './StudentDropdown'; // Adjust the path as needed
 import ProfileDropdown from './ProfileDropdown'; // Import the ProfileDropdown component
-
+// import EditPassword from './components/EditPassword';
 function Navbar(props) {
   let {  username, Loggedin, setLoggedin} =props
   const students = [
