@@ -5,6 +5,8 @@ import Card from './components/Cards';
 import Navbar from './components/Navbar';
 function App() {
   const [username, setUsername] = useState('');
+  const [email, setemail] = useState('');
+  
   const [password, setPassword] = useState('');
   const [Loggedin, setLoggedin]= useState(false);
 
@@ -28,9 +30,12 @@ function App() {
     password={password}
     setPassword={setPassword}
     Loggedin={Loggedin}
-    setLoggedin={setLoggedin} /></>}
+    setLoggedin={setLoggedin}
+    email={email}
+    setemail={setemail} /></>}
     {Loggedin && <>
-      <Navbar Loggedin={Loggedin} setLoggedin={setLoggedin}  username={username} />
+      <Navbar Loggedin={Loggedin} setLoggedin={setLoggedin}  username={username}     email={email}
+ />
       <Card 
           
            />

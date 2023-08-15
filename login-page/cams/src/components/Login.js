@@ -3,14 +3,18 @@ import './App.css';
 let users =[
     {username:"abc",
      password:"abc",
-    email:"abc@abc"}
+    email:"abc@abc"},
+    {username:"Ajay",
+    password:"1",
+   email:"ajay@gmail.com"}
+
 ]
 function Login(props) {
  
-let {  username, setUsername,password, setPassword,Loggedin, setLoggedin} =props
-
+let {  username, setUsername,password, setPassword,Loggedin, setLoggedin,email, setemail} =props
+const [error,Seterror]= useState(false)
   const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+    setemail(event.target.value.toLowerCase());
   };
 
   const handlePasswordChange = (event) => {
@@ -23,15 +27,20 @@ let {  username, setUsername,password, setPassword,Loggedin, setLoggedin} =props
     console.log('Username:', username);
     console.log('Password:', password);
     
-    users.forEach((a,i)=>{if(a.username===username &&  a.password===password){
+    users.forEach((a,i)=>
+    {
+        console.log("i",i)
+        if(a.email===email.toLowerCase() &&  a.password===password){
         setLoggedin(true)
-        
-    }
-if(i+1==users.length &&!Loggedin ){
-    alert("check email and pass")
-}})
+        setUsername(a.username)
+         }
+       
 
-  
+})
+
+if( !Loggedin){
+    Seterror(true)
+     }
     // You can implement your login logic here
   };
 
@@ -40,8 +49,9 @@ if(i+1==users.length &&!Loggedin ){
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
         <div>
+            {error &&<> <h6>Enter correct deatils</h6></>}
           <label>Username:</label>
-          <input type="text" value={username} onChange={handleUsernameChange} />
+          <input type="text" value={email} onChange={handleUsernameChange} />
         </div>
         <div>
           <label>Password:</label>
