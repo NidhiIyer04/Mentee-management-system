@@ -39,9 +39,7 @@ const [error,Seterror]= useState(false)
         sessionStorage.setItem("Loggedin",true );
 
 
-         }
-       
-
+         }  
 })
 
 if( !Loggedin){

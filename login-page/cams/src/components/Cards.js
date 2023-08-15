@@ -15,31 +15,36 @@ import './Card.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
 function Cards(props) {
+  let {enrnum,setenrnum,clicked,setclicked  } = props;
   
-let students=[{ title:'Card Title',
+let students=[{ title:'Veeramraju Lakshmi Ajay',
 imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:'Hello'},
+,body:{id:"21STUCHH01017"}},
 { title:'Card Title',
 imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:'Hello'},
+,body:{id:"21STUCHH0104"}},
 { title:'Card Title',
 imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:'Hello'},{ title:'Card Title',
+,body:{id:"21STUCHH01011"}},{ title:'Card Title',
 imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:'Hello'}
+,body:{id:"21STUCHH0103"}}
 ,{ title:'Card Title',
 imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:'Hello'},{ title:'Card Title',
+,body:{id:"21STUCHH0102"}},{ title:'Card Title',
 imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:'Hello'}]
+,body:{id:"21STUCHH0101"}}]
 
 
 //  let { title, imageUrl, body}   = props
  console.log(props)
  props=students[0]
- let { title, imageUrl, body}   = props
+//  let { title, imageUrl, body}   = props
+function click (e){
+  setenrnum(e)
+  setclicked(true)
+
+}
   return (<>
      <Row xs={1} md={5} className="g-4">
       {students.map(({ title, imageUrl, body}, idx) => (
@@ -49,11 +54,11 @@ imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-
             <Card.Body>
               <Card.Title>{title}</Card.Title>
               <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                <pre>
+              { body.id}
+               </pre>
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary" onClick={()=>click(body.id)}>Go somewhere</Button>
             </Card.Body>
           </Card>
         </Col>
