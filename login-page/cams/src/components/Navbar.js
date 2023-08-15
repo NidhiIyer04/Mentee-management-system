@@ -21,9 +21,9 @@ function Navbar(props) {
         {/* <StudentDropdown students={students} /> */}
       </div>
       <div className="navbar-right">
-        <h2 id="title">Mentee Management</h2>
+        <h2 id="title" s>Mentee Management</h2>
         <ul id="navbar">
-          <li><a className="active" href="index.html">Dark/Light Mode</a></li>
+          <li><a style={{ visibility: "hidden"}}>knlnln'pjnpjDark/Light Mode</a></li>
           <li>
             <ProfileDropdown  
              Loggedin={Loggedin} setLoggedin={setLoggedin}  username={username}

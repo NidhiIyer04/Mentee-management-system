@@ -43,7 +43,8 @@ function App() {
         enrnum={enrnum}
         setenrnum={setenrnum}
        clicked={clicked} 
-       setclicked={setclicked}          
+       setclicked={setclicked}  
+       email={email}        
            /></>
            
            }

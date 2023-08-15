@@ -6,7 +6,14 @@ let users =[
     email:"abc@abc"},
     {username:"Ajay",
     password:"1",
-   email:"ajay@gmail.com"}
+   email:"ajay"},
+   {username:"a",
+    password:"1",
+   email:"a"},
+   {username:"b",
+    password:"1",
+   email:"b"},
+
 
 ]
 function Login(props) {

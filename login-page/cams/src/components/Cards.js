@@ -14,25 +14,32 @@ import Card from 'react-bootstrap/Card';
 import './Card.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import img from 'D:\\Mentor\\Mentee-management-system\\login-page\\cams\\src\\components\\Images\\21STUCHH010173.jpg'
 function Cards(props) {
-  let {enrnum,setenrnum,clicked,setclicked  } = props;
+  let {enrnum,setenrnum,clicked,setclicked ,email } = props;
   
 let students=[{ title:'Veeramraju Lakshmi Ajay',
-imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:{id:"21STUCHH01017"}},
+imageUrl:img
+,body:{id:"21STUCHH010173"},
+memail:"ajay",
+},
 { title:'Card Title',
-imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
-,body:{id:"21STUCHH0104"}},
+imageUrl:img
+,body:{id:"21STUCHH0104"},
+memail:"a"},
+
 { title:'Card Title',
-imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
+imageUrl:img
 ,body:{id:"21STUCHH01011"}},{ title:'Card Title',
-imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
+imageUrl:img,
+memail:"a"
 ,body:{id:"21STUCHH0103"}}
 ,{ title:'Card Title',
-imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
+memail:"b",
+imageUrl:img
 ,body:{id:"21STUCHH0102"}},{ title:'Card Title',
-imageUrl:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib:rb-4.0.3&ixid:M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto:format&fit:crop&w:2074&q:80'
+imageUrl:img,
+memail:"b"
 ,body:{id:"21STUCHH0101"}}]
 
 
@@ -47,12 +54,13 @@ function click (e){
 }
   return (<>
      <Row xs={1} md={5} className="g-4">
-      {students.map(({ title, imageUrl, body}, idx) => (
+      {students.map(({ title, imageUrl, body,memail}, idx) => (
+        memail===email &&<>
         <Col key={idx}>
           <Card>
           <Card.Img variant="top" src={imageUrl} />
             <Card.Body>
-              <Card.Title>{title}</Card.Title>
+              <Card.Title >{title}</Card.Title>
               <Card.Text>
                 <pre>
               { body.id}
@@ -61,7 +69,7 @@ function click (e){
               <Button variant="primary" onClick={()=>click(body.id)}>Go somewhere</Button>
             </Card.Body>
           </Card>
-        </Col>
+        </Col></>
       ))}
     </Row></>
 //     <Row xs={1} md={2} className="g-4">
