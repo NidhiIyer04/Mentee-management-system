@@ -33,6 +33,12 @@ const [error,Seterror]= useState(false)
         if(a.email===email.toLowerCase() &&  a.password===password){
         setLoggedin(true)
         setUsername(a.username)
+        sessionStorage.setItem("username",a.username );
+        sessionStorage.setItem("email",email);
+        sessionStorage.setItem("password",password);
+        sessionStorage.setItem("Loggedin",true );
+
+
          }
        
 

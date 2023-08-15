@@ -4,11 +4,11 @@ import Login from './components/Login';
 import Card from './components/Cards';
 import Navbar from './components/Navbar';
 function App() {
-  const [username, setUsername] = useState('');
-  const [email, setemail] = useState('');
+  const [username, setUsername] = useState(sessionStorage.getItem("username")?sessionStorage.getItem("username"):'');
+  const [email, setemail] = useState(sessionStorage.getItem("email")?sessionStorage.getItem("email"):'');
   
-  const [password, setPassword] = useState('');
-  const [Loggedin, setLoggedin]= useState(false);
+  const [password, setPassword] = useState(sessionStorage.getItem("password")?sessionStorage.getItem("password"):"");
+  const [Loggedin, setLoggedin]= useState(sessionStorage.getItem("Loggedin")?sessionStorage.getItem("Loggedin"):false);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
