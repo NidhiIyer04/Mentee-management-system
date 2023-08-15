@@ -49,7 +49,7 @@ if( !Loggedin){
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Login</h2>
         <div>
-            {error &&<> <h6>Enter correct deatils</h6></>}
+            {error &&<> <h6 style={{color:"red"}}>Enter correct details</h6></>}
           <label>Username:</label>
           <input type="text" value={email} onChange={handleUsernameChange} />
         </div>
