@@ -26,32 +26,42 @@ import img from 'D:\\Mentor\\Mentee-management-system\\login-page\\cams\\src\\co
  * body.id. There is also a button inside each Card component that triggers the click function when
  * clicked.
  */
+
 function Cards(props) {
   let {enrnum,setenrnum,clicked,setclicked ,email } = props;
   
-let students=[{ title:'Veeramraju Lakshmi Ajay',
-imageUrl:img
-,body:{id:"21STUCHH010173"},
+let students=[
+  { title:'Veeramraju Lakshmi Ajay',
+imageUrl:img,
+body:{id:"21STUCHH010173"},
 memail:"ajay",
 },
+
 { title:'Card Title',
-imageUrl:img
-,body:{id:"21STUCHH0104"},
+imageUrl:img,
+body:{id:"21STUCHH0104"},
 memail:"a"},
 
 { title:'Card Title',
-imageUrl:img
-,body:{id:"21STUCHH01011"}},{ title:'Card Title',
 imageUrl:img,
-memail:"a"
-,body:{id:"21STUCHH0103"}}
-,{ title:'Card Title',
 memail:"b",
-imageUrl:img
-,body:{id:"21STUCHH0102"}},{ title:'Card Title',
+body:{id:"21STUCHH01011"}},
+
+{ title:'Card Title',
 imageUrl:img,
-memail:"b"
-,body:{id:"21STUCHH0101"}}]
+memail:"a",
+body:{id:"21STUCHH0103"}},
+
+{ title:'Card Title',
+memail:"b",
+imageUrl:img,
+memail:"abc@abc",
+body:{id:"21STUCHH0102"}},
+
+{ title:'Card Title',
+imageUrl:img,
+memail:"b",
+body:{id:"21STUCHH0101"}}]
 
 
 //  let { title, imageUrl, body}   = props
@@ -69,15 +79,15 @@ function click (e){
         memail===email &&<>
         <Col key={idx}>
           <Card>
-          <Card.Img variant="top" src={imageUrl} />
+          <Card.Img variant="top" src={imageUrl} height={"300px"} />
             <Card.Body>
               <Card.Title >{title}</Card.Title>
               <Card.Text>
                 <pre>
-              { body.id}
+              {body.id}
                </pre>
               </Card.Text>
-              <Button variant="primary" onClick={()=>click(body.id)}>Go somewhere</Button>
+              <Button variant="primary" onClick={()=>click(body.id)}>View More</Button>
             </Card.Body>
           </Card>
         </Col></>

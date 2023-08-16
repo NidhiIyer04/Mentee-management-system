@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Card from './components/Cards';
 import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard'
+
 function App() {
   const [username, setUsername] = useState(sessionStorage.getItem("username")?sessionStorage.getItem("username"):'');
   const [email, setemail] = useState(sessionStorage.getItem("email")?sessionStorage.getItem("email"):'');
@@ -15,7 +16,6 @@ function App() {
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
-
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -29,15 +29,15 @@ function App() {
   };
 
   return (<>
-    {!Loggedin && <><Login username={username} setUsername={setUsername}
+    {!Loggedin && <> <Login username={username} setUsername={setUsername}
     password={password}
     setPassword={setPassword}
     Loggedin={Loggedin}
     setLoggedin={setLoggedin}
     email={email}
-    setemail={setemail} /></>}
+    setemail={setemail} /> </>}
     {Loggedin && <>
-      <Navbar Loggedin={Loggedin} setLoggedin={setLoggedin}  username={username}     email={email}
+      <Navbar Loggedin={Loggedin} setLoggedin={setLoggedin}  username={username}   email={email}
  />
       {!clicked &&<><Card 
         enrnum={enrnum}

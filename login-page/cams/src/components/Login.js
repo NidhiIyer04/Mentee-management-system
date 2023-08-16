@@ -4,18 +4,20 @@ let users =[
     {username:"abc",
      password:"abc",
     email:"abc@abc"},
+
     {username:"Ajay",
     password:"1",
    email:"ajay"},
+
    {username:"a",
     password:"1",
    email:"a"},
+
    {username:"b",
     password:"1",
    email:"b"},
-
-
 ]
+
 function Login(props) {
  
 let {  username, setUsername,password, setPassword,Loggedin, setLoggedin,email, setemail} =props
