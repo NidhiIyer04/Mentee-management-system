@@ -9,7 +9,7 @@
  * and passed as props to the Card component.
  */
 
-import React from 'react';
+import React,{useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Card.css';
@@ -73,9 +73,21 @@ function click (e){
   setclicked(true)
 }
 
+const [search,setSearch]= useState('')
+console.log(search)
   return (<>
+
+<input 
+        type='text' 
+        placeholder='Search for students'
+        onChange={(e)=> setSearch(e.target.value)}
+        
+        />
+
      <Row xs={1} md={5} className="g-4">
-      {students.map(({ title, imageUrl, body,memail}, idx) => (
+      {students.filter(({title, imageUrl, body,memail})=>{
+           return search.toLowerCase()===''? {title, imageUrl, body,memail} : {title, imageUrl, body,memail}.toLowerCase().includes(search);
+      }).map(({ title, imageUrl, body,memail}, idx) => (
         memail===email &&<>
         <Col key={idx}>
           <Card className='Card-container'>
