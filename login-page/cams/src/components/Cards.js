@@ -71,15 +71,15 @@ body:{id:"21STUCHH0101"}}]
 function click (e){
   setenrnum(e)
   setclicked(true)
-
 }
+
   return (<>
      <Row xs={1} md={5} className="g-4">
       {students.map(({ title, imageUrl, body,memail}, idx) => (
         memail===email &&<>
         <Col key={idx}>
-          <Card>
-          <Card.Img variant="top" src={imageUrl} height={"300px"} />
+          <Card className='Card-container'>
+          <Card.Img variant="top" src={imageUrl} height={"280px"} />
             <Card.Body>
               <Card.Title >{title}</Card.Title>
               <Card.Text>

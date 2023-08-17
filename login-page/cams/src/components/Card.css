@@ -25,7 +25,18 @@
     padding-top: 20px;
 } */ 
 
+.Card-container{
+    position: relative;
+    background-color: var(--color-grey-primary);
+    margin: 1rem;
+    
+}
 
-/* .Card-container:hover{
-         width: 20px;
-} */
+
+.Card-container:hover{
+         transform: translateY(-0.5rem);
+         box-shadow: 0.5rem 0.75rem 1.5rem #efefef;
+         cursor: pointer;
+         transition: 0.2s;
+        }
+
