@@ -6,13 +6,14 @@ import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard'
 
 function App() {
+
   const [username, setUsername] = useState(sessionStorage.getItem("username")?sessionStorage.getItem("username"):'');
   const [email, setemail] = useState(sessionStorage.getItem("email")?sessionStorage.getItem("email"):'');
   const [enrnum, setenrnum] = useState("")
   const [clicked, setclicked] = useState(false)
   const [password, setPassword] = useState(sessionStorage.getItem("password")?sessionStorage.getItem("password"):"");
   const [Loggedin, setLoggedin]= useState(sessionStorage.getItem("Loggedin")?sessionStorage.getItem("Loggedin"):false);
-
+  
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -44,14 +45,18 @@ function App() {
         setenrnum={setenrnum}
        clicked={clicked} 
        setclicked={setclicked}  
-       email={email}        
+       email={email}  
+      //  students={students}      
            /></>
            
            }
        {clicked &&<>
        <Dashboard
+       email={email}
        setclicked={setclicked}
-       en={enrnum}
+       enrnum={enrnum}
+       setenrnum={setenrnum}
+      //  students={students}
        />
        </>
            
