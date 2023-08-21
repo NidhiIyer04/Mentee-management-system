@@ -11,9 +11,9 @@ function ProfileDropdown(props) {
   return (
     <DropdownButton id="profile_dropdown" title={username}>
       <Dropdown.Item ><EditPassword/></Dropdown.Item>
-      <Dropdown.Item onClick={()=>
+      <Dropdown.Item><a onClick={()=>
       {setLoggedin(false)
-      sessionStorage.clear()}}><a >Logout</a></Dropdown.Item>
+      sessionStorage.clear()}}>Logout</a></Dropdown.Item>
     </DropdownButton>
   )
 }
