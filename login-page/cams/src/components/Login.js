@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 import './App.css';
 let users =[
-    {username:"abc",
-     password:"abc",
-    email:"abc@abc"},
+    {username:"Lakshmi Ajay",
+     password:"ajay",
+    email:"ajay@gmail.com"},
 
-    {username:"Ajay",
-    password:"1",
-   email:"ajay"},
+    {username:"TCG Vineeth",
+    password:"vineeth",
+   email:"vineeth@gmail."},
 
-   {username:"a",
-    password:"1",
-   email:"a"},
+   {username:"Nidhi Iyer",
+    password:"nidhi",
+   email:"nidhi@gmail.com"},
 
-   {username:"b",
-    password:"1",
-   email:"b"},
+   {username:"Gaurav Sushant",
+    password:"gaurav",
+   email:"gaurav@gmail.com"},
+
+   {username:"Tanishq Kumar",
+    password:"tanishq",
+   email:"tanishq@gmail.com"},
+   
 ]
 
 function Login(props) {
