@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Card.css';
-import img from 'C:\\Users\\gaura\\Desktop\\Mentor\\Mentee-management-system\\login-page\\cams\\src\\components\\Images\\21STUCHH010173.jpg'
+import img from 'D:\\Mentor\\Mentee-management-system\\login-page\\cams\\src\\components\\Images\\21STUCHH010173.jpg'
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,40 +16,146 @@ import Col from 'react-bootstrap/Col';
  * body.id. There is also a button inside each Card component that triggers the click function when
  * clicked.
  */
+  
+let students=[
 
+  //mentor1
+    { title:'Veeramraju Lakshmi Ajay',
+  imageUrl:img,
+  body:{id:"21STUCHH010173"},
+  memail:"ajay@gmail.com",
+  },
+  
+  { title:'Card Title',
+  imageUrl:img,
+  body:{id:"21STUCHH010174"},
+  memail:"ajay@gmail.com"},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  body:{id:"21STUCHH010175"},
+  memail:"ajay@gmail.com",},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  body:{id:"21STUCHH010176"},
+  memail:"ajay@gmail.com",},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"ajay@gmail.com",
+  body:{id:"21STUCHH010177"}},
+  
+  //mentor2
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"vineeth@gmail.com",
+  body:{id:"21STUCHH010178"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"vineeth@gmail.com",
+  body:{id:"21STUCHH010179"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"vineeth@gmail.com",
+  body:{id:"21STUCHH010180"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"vineeth@gmail.com",
+  body:{id:"21STUCHH010190"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"vineeth@gmail.com",
+  body:{id:"21STUCHH010191"}},
+  
+  //mentor3
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"nidhi@gmail.com",
+  body:{id:"21STUCHH010192"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"nidhi@gmail.com",
+  body:{id:"21STUCHH010193"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"nidhi@gmail.com",
+  body:{id:"21STUCHH010194"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"nidhi@gmail.com",
+  body:{id:"21STUCHH010195"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"nidhi@gmail.com",
+  body:{id:"21STUCHH010196"}},
+  
+  //mentor4
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"gaurav@gmail.com",
+  body:{id:"21STUCHH010197"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"gaurav@gmail.com",
+  body:{id:"21STUCHH010198"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"gaurav@gmail.com",
+  body:{id:"21STUCHH010199"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"gaurav@gmail.com",
+  body:{id:"21STUCHH010200"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"gaurav@gmail.com",
+  body:{id:"21STUCHH010201"}},
+  
+  
+  //mentor5
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"tanishq@gmail.com",
+  body:{id:"21STUCHH010202"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"tanishq@gmail.com",
+  body:{id:"21STUCHH010203"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"tanishq@gmail.com",
+  body:{id:"21STUCHH010204"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"tanishq@gmail.com",
+  body:{id:"21STUCHH010205"}},
+  
+  { title:'Card Title',
+  imageUrl:img,
+  memail:"tanishq@gmail.com",
+  body:{id:"21STUCHH010205"}},
+  
+  ]
+  
 
 function Cards(props) {
-  let students=[{ title:'Veeramraju Lakshmi Ajay',
-imageUrl:img
-,body:{id:"21STUCHH010173"},
-memail:"ajay",
-},
 
-{ title:'Card Title',
-imageUrl:img,
-body:{id:"21STUCHH0104"},
-memail:"a"},
-
-{ title:'Card Title',
-imageUrl:img,
-memail:"b",
-body:{id:"21STUCHH01011"}},
-
-{ title:'Card Title',
-imageUrl:img,
-memail:"a",
-body:{id:"21STUCHH0103"}},
-
-{ title:'Card Title',
-memail:"b",
-imageUrl:img,
-memail:"abc@abc",
-body:{id:"21STUCHH0102"}},
-
-{ title:'Card Title',
-imageUrl:img,
-memail:"b",
-body:{id:"21STUCHH0101"}}]
 
   let {enrnum,setenrnum,clicked,setclicked ,email } = props;
   
