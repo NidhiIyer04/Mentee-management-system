@@ -1,7 +1,7 @@
 import { Button } from "bootstrap";
 import './A.CSS'
 import img from 'D:\\Mentor\\Mentee-management-system\\login-page\\cams\\src\\components\\Images\\21STUCHH010173.jpg'
-
+import ControlledTabs from "./ControlledTabs";
 
 let students=[
 
@@ -147,16 +147,20 @@ function Dashboard(props){
   
 
 <div className="container" style={{"margin-left":" 0px","margin-right": "10px;"}}>
+    
 <div className="content-wrapper">
+    
     <div className="email-app card-margin">
      
         <div className="email-list-wrapper">
+            
             <div className="email-list-header">
+                
                 <div className="dropdown">
                     <button className="btn btn-sm btn-flash-border-base shadow-none dropdown-toggle" type="button" id="dropdownMenuButton" onClick={()=>{setclicked(false)}} data-toggle="left" aria-haspopup="true" aria-expanded="false">
                         Back
                     </button>
-                
+            
                 </div>
             </div>
             <div id="email-app-body" className="email-list-scroll-container ps ps--active-y">
@@ -288,8 +292,12 @@ function Dashboard(props){
             </div>
        
         </div> */}
-    </div>
+<div>
+     <ControlledTabs/>
 </div>
+
+    </div>
+</div> 
 </div>
    
    
